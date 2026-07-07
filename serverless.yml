@@ -16,6 +16,12 @@ plugins:
   - serverless-offline
   - serverless-dynamodb
 
+package:
+  individually: true
+  patterns:
+    - "!.dynamodb"
+    - "!.node_modules" # Usar Layers
+
 custom:
   dynamodb:
     # If you only want to use DynamoDB Local in some stages, declare them here
@@ -30,11 +36,20 @@ custom:
 
 functions:
   get-users:
-    handler: handler.getUsers
+    handler: getUsers/handler.getUsers
     events:
       - http:
           path: users/{id}
           method: GET
+          cors: true
+
+  create-users:
+    handler: createUsers/handler.createUsers
+    events:
+      - http:
+          path: users
+          method: POST
+          cors: true
 
 resources:
   Resources:
