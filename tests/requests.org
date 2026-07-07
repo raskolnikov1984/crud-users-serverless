@@ -1,0 +1,9 @@
+#+title: Requests
+#+FILETAGS: :verb:
+
+
+* USERS :verb:
+
+** GET Users :verb:
+get http://localhost:3000/dev/users/1
+Accept: application/json
