@@ -24,3 +24,6 @@ patch users/58dd1b4e-7a0f-48c4-a986-a2bc05fc0873
 {
   "name": "Marianito"
 }
+
+** DELETE User
+delete users/58dd1b4e-7a0f-48c4-a986-a2bc05fc0873

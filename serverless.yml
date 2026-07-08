@@ -61,6 +61,7 @@ functions:
 
   delete-users:
     handler: deleteUsers/handler.deleteUsers
+    runtime: python3.14
     events:
       - http:
           path: users/{id}

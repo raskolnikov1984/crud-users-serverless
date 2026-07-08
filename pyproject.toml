@@ -1,0 +1,17 @@
+[project]
+name = "users"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "aserrador",email = "alejandro.ayala@onecluster.org"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "boto3 (>=1.43.42,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
