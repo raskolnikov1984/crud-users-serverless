@@ -50,6 +50,7 @@ functions:
           path: users
           method: POST
           cors: true
+
   update-users:
     handler: updateUsers/handler.updateUsers
     events:
@@ -57,6 +58,15 @@ functions:
           path: users/{id}
           method: PATCH
           cors: true
+
+  delete-users:
+    handler: deleteUsers/handler.deleteUsers
+    events:
+      - http:
+          path: users/{id}
+          method: DELETE
+          cors: true
+
 resources:
   Resources:
     usersTable:
