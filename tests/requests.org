@@ -1,18 +1,26 @@
 #+title: Requests
 #+FILETAGS: :verb:
 
-
-* USERS :verb:
-
-** GET Users :verb:
-get http://localhost:3000/dev/users/1
+* USERS API :verb:
+template https://btz8fj5a9c.execute-api.us-east-1.amazonaws.com/dev/
+Content-Type: application/json;
 Accept: application/json
 
-** POST Users
-post http://localhost:3000/dev/users
+** GET Users :verb:
+get users/58dd1b4e-7a0f-48c4-a986-a2bc05fc0873
+
+** POST Users :verb:
+post /users
 
 {
- "name": "Jaggy",
- "telefono": "33211124234",
- "address": "Cra Bolivar 233"
+  "name": "Jaggy",
+  "telefono": "33211124234",
+  "address": "Cra Bolivar 233"
+}
+
+** PATCH User :verb:
+patch users/58dd1b4e-7a0f-48c4-a986-a2bc05fc0873
+
+{
+  "name": "Marianito"
 }
